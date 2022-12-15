@@ -1,0 +1,1 @@
+export const API_URL = 'https://639823b1fe03352a94c5f1fb.mockapi.io/formdata';
