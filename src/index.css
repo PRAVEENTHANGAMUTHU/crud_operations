@@ -15,6 +15,9 @@ body {
   width: 100%;
 
   background-color: black;
+ 
+  background-image: linear-gradient(to right top, #625fa8, #4c488c, #363370, #211e56, #0b0a3d);
+
   color: white;
 
   font-family: 'Poppins', sans-serif;
