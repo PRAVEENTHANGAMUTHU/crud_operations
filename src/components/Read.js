@@ -58,10 +58,10 @@ const Read = () => {
               <td>{data.age}</td>
               <td>{data.email}</td>
               <td className="delete" onClick={() => DeleteData(data.id)}>
-                <MdDeleteForever size={25} />
+                <MdDeleteForever size={20} />
               </td>
               <td className="update" onClick={() => UpdateData(data)}>
-                <MdOutlineEditNote size={25} />
+                <MdOutlineEditNote size={20} />
               </td>
             </tr>
           );
