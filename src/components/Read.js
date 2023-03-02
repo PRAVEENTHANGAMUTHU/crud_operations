@@ -47,6 +47,8 @@ const Read = () => {
           <th>Date of Birth</th>
           <th>Age</th>
           <th>Email</th>
+          <th>Country Code / Country</th>
+          <th>Phone Number</th>
         </tr>
 
         {apiData.map((data) => {
@@ -57,6 +59,8 @@ const Read = () => {
               <td>{data.dob}</td>
               <td>{data.age}</td>
               <td>{data.email}</td>
+              <td>{data.countryCode}</td>
+              <td>{data.phoneNumber}</td>
               <td className="delete" onClick={() => DeleteData(data.id)}>
                 <MdDeleteForever size={20} />
               </td>

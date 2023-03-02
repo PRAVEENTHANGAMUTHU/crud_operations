@@ -31,8 +31,51 @@
   
 }
 
+.country-code-container{
+  position: relative;
+  top: 7px;
+}
+
+.country-code-input{
+  width: 100px;
+}
+
+.phone-number-input{
+  width: 157px;
+}
+
+.error{
+  color: red;
+  font-size: 8px;
+  margin-left: 88%;
+}
+
+.dropdown{
+  width: 99px;
+  font-size: 12px;
+  height: 85px;
+  overflow-y: scroll;
+  position: absolute;
+  margin-top: 28px;
+  background-color: #363370;
+  opacity: 0.8;
+}
+
+.dropdown-results{
+  font-size: 8px;
+}
+
+.dropdown-results:hover{
+  background-color: #040136;
+}
+
+.cdrop-down-input{
+  position: relative;
+
+}
+
 .form{
-  min-width: 350px;
+  min-width: 420px;
   height: 50%;
   display: flex;
   flex-direction: column;
