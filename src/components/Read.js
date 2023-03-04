@@ -3,6 +3,7 @@ import { SiFormstack } from "react-icons/si";
 import { MdDeleteForever, MdOutlineEditNote } from "react-icons/md";
 import { API_URL } from "../constants/API";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import axios from "axios";
 
@@ -41,15 +42,22 @@ const Read = () => {
       <h2 className="read-title">Saved Data</h2>
 
       <table cellSpacing="15" className="table">
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Date of Birth</th>
-          <th>Age</th>
-          <th>Email</th>
-          <th>Country Code / Country</th>
-          <th>Phone Number</th>
-        </tr>
+        {apiData.length == 0 ? (
+          <div>
+            <h4>No Data to Show!</h4>
+          </div>
+        ) : (
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>Country Code</th>
+            <th>Phone Number</th>
+          </tr>
+        )}
 
         {apiData.map((data) => {
           return (
@@ -59,6 +67,7 @@ const Read = () => {
               <td>{data.dob}</td>
               <td>{data.age}</td>
               <td>{data.email}</td>
+              <td>{data.country}</td>
               <td>{data.countryCode}</td>
               <td>{data.phoneNumber}</td>
               <td className="delete" onClick={() => DeleteData(data.id)}>
@@ -70,7 +79,14 @@ const Read = () => {
             </tr>
           );
         })}
+        
       </table>
+      <div className="back-btn">
+        <h4>Back to</h4>
+      <Link className="read-back-btn" to="/">Home</Link>
+      <Link className="read-back-btn" to="/create">Create</Link>
+      </div>
+      
     </div>
   );
 };
